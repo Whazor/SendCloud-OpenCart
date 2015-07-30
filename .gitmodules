@@ -1,0 +1,3 @@
+[submodule "src/system/library/SendCloud-API-PHP-Wrapper"]
+	path = src/system/library/SendCloud-API-PHP-Wrapper
+	url = git@github.com:SendCloud/SendCloud-API-PHP-Wrapper.git

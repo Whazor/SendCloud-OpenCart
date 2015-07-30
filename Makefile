@@ -17,17 +17,17 @@ build-extension:
 	rm -rf ./dist/
 	mkdir -p $(BUILD_SENDCLOUD_ROOT)
 
+	cp ./src/install* $(BUILD_ROOT)/
 	cp -r ./src/admin ./src/image ./src/vqmod $(BUILD_ROOT)/upload/
 	cp -r ./src/ocmod $(BUILD_ROOT)/ocmod/
 	curl https://raw.githubusercontent.com/SendCloud/SendCloud-API-PHP-Wrapper/a40dfd55acfea2d33301169c63d59c82a68b47f4/src/SendCloudApi.php \
 		> "$(BUILD_SENDCLOUD_ROOT)/sendcloud_api.php"
 	echo 'Extension can be found in $(BUILD_ROOT)'
 
-build: build-pdf-docs build-extension
-	mkdir $(BUILD_DOCS_ROOT)
-	cp -rf ./docs/build/pdf/* $(BUILD_DOCS_ROOT)
-
-build-zip: build
+build-zip:
 	# Create a zip for online distribution. Use Python stdlib zip to limit dependency requirements.
 	$(PYTHON) -c "import shutil; shutil.make_archive('$(BUILD_ROOT)', 'zip', '$(BUILD_ROOT)')"
 
+build: build-extension build-pdf-docs build-zip
+	mkdir $(BUILD_DOCS_ROOT)
+	cp -rf ./docs/build/pdf/* $(BUILD_DOCS_ROOT)
