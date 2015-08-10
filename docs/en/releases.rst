@@ -2,6 +2,12 @@
 Releases
 ********
 
+1.0.4
+=====
+
+* Remove support for VQmod, OCmod is now the default.
+* Scan&Go functionality
+
 1.0.3
 =====
 
@@ -15,7 +21,7 @@ Releases
 1.0.1
 =====
 
-* Improved PHP <5.4 compatibility. 
+* Improved PHP <5.4 compatibility.
 
 1.0.0
 =====

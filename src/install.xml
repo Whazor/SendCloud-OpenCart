@@ -3,7 +3,7 @@
 	<id>SendCloud OpenCart 2 Extension</id>
 	<name>SendCloud OpenCart 2 Extension</name>
 	<code>SendCloud_OpenCart_2_OCmod</code>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<author>NoSite.nl for SendCloud</author>
 	<link>http://www.sendcloud.nl</link>
 	<file path="admin/view/template/sale/order_list.tpl">
